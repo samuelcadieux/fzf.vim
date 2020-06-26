@@ -29,7 +29,7 @@ if [ ! -r "$FILE" ]; then
 fi
 
 FILE_LENGTH=${#FILE}
-MIME=$(file --dereference --mime "$FILE")
+MIME=$(file --mime "$FILE")
 if [[ "${MIME:FILE_LENGTH}" =~ binary ]]; then
   echo "$MIME"
   exit 0
